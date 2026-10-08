@@ -1,0 +1,6 @@
+{
+  "name": "Vale — Qué bonito coincidir contigo",
+  "description": "Una experiencia interactiva y editorial de cumpleaños creada con amor para Vale: recuerdos, rituales, carta íntima y una sorpresa final.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
