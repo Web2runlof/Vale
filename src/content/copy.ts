@@ -31,6 +31,7 @@ export const copy = {
     slides: [
       {
         id: 1,
+        buttonLabel: "Adorarte",
         photoId: 6,
         originalFile: "Foto 6.jpeg",
         title: "Que nunca te falte esa sonrisa.",
@@ -39,6 +40,7 @@ export const copy = {
       },
       {
         id: 2,
+        buttonLabel: "Amarte",
         photoId: 3,
         originalFile: "Foto 3.jpeg",
         title: "Que la vida nunca deje de sorprenderte.",
@@ -47,6 +49,7 @@ export const copy = {
       },
       {
         id: 3,
+        buttonLabel: "Sorprenderte",
         photoId: 5,
         originalFile: "Foto 5.jpeg",
         title: "Que sigan llegando aventuras.",
@@ -55,6 +58,7 @@ export const copy = {
       },
       {
         id: 4,
+        buttonLabel: "Celebrarte",
         photoId: 14,
         originalFile: "Foto 14.jpeg",
         title: "Brindo por todo lo bonito que viene.",
@@ -63,6 +67,7 @@ export const copy = {
       },
       {
         id: 5,
+        buttonLabel: "Consentirte",
         photoId: 1,
         originalFile: "Foto 1.jpeg",
         title: "Por tu ternura y tus locuras.",
@@ -71,6 +76,7 @@ export const copy = {
       },
       {
         id: 6,
+        buttonLabel: "Cuidarte",
         photoId: 19,
         originalFile: "Foto 19.jpeg",
         title: "Que nunca te falten ganas de disfrutar.",
@@ -79,6 +85,7 @@ export const copy = {
       },
       {
         id: 7,
+        buttonLabel: "Enamorarte",
         photoId: 24,
         originalFile: "Foto 24.jpeg",
         title: "Por todas las versiones de ti.",
@@ -87,6 +94,7 @@ export const copy = {
       },
       {
         id: 8,
+        buttonLabel: "Mimarte",
         photoId: 12,
         originalFile: "Foto 12.jpeg",
         title: "Hoy pide todos los deseos que quieras.",

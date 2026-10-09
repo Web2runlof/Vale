@@ -278,11 +278,11 @@ export const BirthdayCelebrationCarousel: React.FC<BirthdayCelebrationCarouselPr
 
                     <button
                       onClick={() => handleHeartTap(slide.id)}
-                      aria-label="Dar amor a este deseo"
+                      aria-label={slide.buttonLabel}
                       className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-medium backdrop-blur-sm transition-all active:scale-95 cursor-pointer shadow-sm"
                     >
                       <Heart className={`w-3.5 h-3.5 ${tapCount > 0 ? "fill-[#C62E4E] text-[#C62E4E]" : "fill-white/80"}`} />
-                      <span>Celebrarte</span>
+                      <span>{slide.buttonLabel}</span>
                       {tapCount > 0 && <span className="opacity-90 font-mono">({tapCount})</span>}
                     </button>
 

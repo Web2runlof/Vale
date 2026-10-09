@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion, useInView } from "motion/react";
 import confetti from "canvas-confetti";
-import { Gift, Heart, Send, Copy, Check, RotateCcw, Sparkles, PawPrint, Camera, Upload } from "lucide-react";
+import { Gift, Heart, Send, Copy, Check, RotateCcw, Sparkles, PawPrint } from "lucide-react";
 import { copy } from "../content/copy";
 import { birthdayConfig } from "../content/birthdayConfig";
 import { galleryPhotos, BirthdayPhoto } from "../content/galleryData";
@@ -57,56 +57,12 @@ export const BirthdayGift: React.FC<BirthdayGiftProps> = ({
     }
   });
 
-  const [customBg, setCustomBg] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem("vale_gift_custom_bg") || null;
-    } catch {
-      return null;
-    }
-  });
-
   const [copied, setCopied] = useState<boolean>(false);
   const shouldReduceMotion = useReducedMotion();
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Closing photo is Foto 28 (or custom uploaded background)
-  const baseClosingPhoto =
+  // Foto 28 remains the fixed, published closing background.
+  const activeClosingPhoto =
     galleryPhotos.find((p) => p.id === 28) || galleryPhotos[galleryPhotos.length - 1];
-
-  const activeClosingPhoto: BirthdayPhoto = customBg
-    ? {
-        id: 9999,
-        src: customBg,
-        originalFilename: "foto-personalizada-cumple.jpg",
-        alt: "Foto de fondo personalizada de Vale",
-        category: "closing",
-        caption: "Tu foto de fondo personalizada",
-      }
-    : baseClosingPhoto;
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const result = event.target?.result as string;
-        if (result) {
-          setCustomBg(result);
-          try {
-            localStorage.setItem("vale_gift_custom_bg", result);
-          } catch {}
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleResetBg = () => {
-    setCustomBg(null);
-    try {
-      localStorage.removeItem("vale_gift_custom_bg");
-    } catch {}
-  };
 
   // Secondary shared closing photos (Fotos 25, 26, 27)
   const sharedPhoto25 = galleryPhotos.find((p) => p.id === 25);
@@ -594,26 +550,8 @@ export const BirthdayGift: React.FC<BirthdayGiftProps> = ({
                   <Heart className="w-6 h-6 text-[#C62E4E] fill-[#C62E4E] animate-pulse" />
                 </div>
 
-                {/* Background Photo Upload & Controls */}
+                {/* Return to the beginning; background photos cannot be changed by visitors. */}
                 <div className="pt-6 flex flex-wrap items-center justify-center gap-3">
-                  <button
-                    onClick={() => fileInputRef.current?.click()}
-                    className="inline-flex items-center gap-2 text-xs font-medium text-white/95 hover:text-white bg-white/20 hover:bg-white/30 transition-all py-2.5 px-5 rounded-full backdrop-blur-md cursor-pointer border border-white/30 shadow-lg active:scale-95"
-                    title="Sube una imagen desde tus archivos para cambiar la foto de fondo de esta sección"
-                  >
-                    <Upload className="w-3.5 h-3.5 text-[#FAD2E1]" />
-                    <span>{customBg ? "Cambiar foto de fondo" : "Subir foto de fondo"}</span>
-                  </button>
-
-                  {customBg && (
-                    <button
-                      onClick={handleResetBg}
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-white/80 hover:text-white bg-black/40 hover:bg-black/60 transition-all py-2.5 px-4 rounded-full backdrop-blur-md cursor-pointer border border-white/15"
-                    >
-                      <span>Restablecer foto original</span>
-                    </button>
-                  )}
-
                   <button
                     onClick={onScrollToTop}
                     className="inline-flex items-center gap-2 text-xs font-medium text-white/90 hover:text-white bg-white/10 hover:bg-white/20 transition-all py-2.5 px-5 rounded-full backdrop-blur-md cursor-pointer shadow-md border border-white/15"
@@ -622,14 +560,6 @@ export const BirthdayGift: React.FC<BirthdayGiftProps> = ({
                     <span>{copy.gift.finalClosure.backToStart}</span>
                   </button>
 
-                  {/* Hidden file input triggered by upload button */}
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    className="hidden"
-                  />
                 </div>
               </motion.div>
             </div>

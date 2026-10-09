@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Clock, Upload, RotateCcw, Heart, Sparkles, PawPrint, Calendar } from "lucide-react";
+import { Clock, Heart, Sparkles, PawPrint, Calendar } from "lucide-react";
 import { galleryPhotos, BirthdayPhoto } from "../content/galleryData";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { easeCinematic } from "../motion/presets";
@@ -21,20 +21,11 @@ export const BirthdayCountdown2027: React.FC<BirthdayCountdown2027Props> = ({
   onPhotoClick,
 }) => {
   const shouldReduceMotion = useReducedMotion();
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Target date: October 12, 2027
   const targetDate = new Date("2027-10-12T00:00:00");
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calculateTimeLeft());
-
-  const [customBg, setCustomBg] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem("vale_countdown2027_custom_bg") || null;
-    } catch {
-      return null;
-    }
-  });
 
   function calculateTimeLeft(): TimeLeft {
     const now = new Date();
@@ -66,40 +57,7 @@ export const BirthdayCountdown2027: React.FC<BirthdayCountdown2027Props> = ({
     galleryPhotos.find((p) => p.id === 2) ||
     galleryPhotos[0];
 
-  const activePhoto: BirthdayPhoto = customBg
-    ? {
-        id: 8888,
-        src: customBg,
-        originalFilename: "foto-fondo-contador-2027.jpg",
-        alt: "Foto de fondo personalizada para la cuenta regresiva 2027",
-        category: "closing",
-        caption: "Fondo de la cuenta regresiva 2027",
-      }
-    : defaultBgPhoto;
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const result = event.target?.result as string;
-        if (result) {
-          setCustomBg(result);
-          try {
-            localStorage.setItem("vale_countdown2027_custom_bg", result);
-          } catch {}
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleResetBg = () => {
-    setCustomBg(null);
-    try {
-      localStorage.removeItem("vale_countdown2027_custom_bg");
-    } catch {}
-  };
+  const activePhoto: BirthdayPhoto = defaultBgPhoto;
 
   return (
     <section
@@ -212,36 +170,6 @@ export const BirthdayCountdown2027: React.FC<BirthdayCountdown2027Props> = ({
             <Heart className="w-3.5 h-3.5 text-[#C62E4E] fill-[#C62E4E]" />
           </div>
 
-          {/* Action Buttons: File Upload for background photo */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              className="inline-flex items-center gap-2 text-xs font-medium text-white/95 hover:text-white bg-white/20 hover:bg-white/30 transition-all py-2.5 px-5 rounded-full backdrop-blur-md cursor-pointer border border-white/25 shadow-lg active:scale-95"
-              title="Selecciona una imagen de tus archivos locales para usarla como fondo del contador"
-            >
-              <Upload className="w-3.5 h-3.5 text-[#FAD2E1]" />
-              <span>{customBg ? "Cambiar foto de fondo" : "Agregar foto de fondo"}</span>
-            </button>
-
-            {customBg && (
-              <button
-                onClick={handleResetBg}
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-white/80 hover:text-white bg-black/40 hover:bg-black/60 transition-all py-2.5 px-4 rounded-full backdrop-blur-md cursor-pointer border border-white/15"
-              >
-                <RotateCcw className="w-3 h-3" />
-                <span>Restablecer foto original</span>
-              </button>
-            )}
-
-            {/* Hidden File Input */}
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleFileUpload}
-              className="hidden"
-            />
-          </div>
         </motion.div>
       </div>
     </section>

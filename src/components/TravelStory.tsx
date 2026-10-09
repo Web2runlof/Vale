@@ -140,7 +140,7 @@ export const TravelStory: React.FC<TravelStoryProps> = ({ onPhotoClick }) => {
           <p className="font-editorial-quote text-2xl sm:text-3xl lg:text-4xl text-white font-medium leading-snug drop-shadow-md">
             "{copy.travel.sceneA}"
           </p>
-          <p className="font-serif italic text-base text-[#EADCF5]/80">
+          <p className="font-serif italic text-sm sm:text-base text-[#EADCF5]/80 leading-relaxed max-w-lg text-pretty">
             {sceneAPhoto.caption}
           </p>
         </div>
@@ -301,7 +301,7 @@ export const TravelStory: React.FC<TravelStoryProps> = ({ onPhotoClick }) => {
                     />
                   </div>
                   <div className="mt-3 px-2 flex items-center justify-between text-xs text-[#EADCF5]/80">
-                    <span className="font-serif italic text-sm text-white truncate pr-2">
+                    <span className="font-serif italic text-sm text-white break-words whitespace-normal pr-2 leading-relaxed">
                       {photo.caption}
                     </span>
                     <span className="text-[10px] text-[#C7A8DF] uppercase tracking-wider shrink-0">
