@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Camera, Eye, Sparkles } from "lucide-react";
 import { BirthdayPhoto } from "../content/galleryData";
 
@@ -17,9 +17,17 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   aspectRatioClass = "aspect-[4/5]",
   priority = false,
 }) => {
+  const imageRef = useRef<HTMLImageElement>(null);
   const [currentSrcIndex, setCurrentSrcIndex] = useState<number>(0);
   const [hasError, setHasError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setCurrentSrcIndex(0);
+    setHasError(false);
+    // Cached files can finish loading before the effect runs (especially Safari).
+    setIsLoading(!(imageRef.current?.complete && imageRef.current.naturalWidth > 0));
+  }, [photo.src]);
 
   // Candidate sources list: primary src first, then fallbacks
   const candidateSrcs = [photo.src, ...(photo.fallbackSrcs || [])];
@@ -51,6 +59,7 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
       {/* Actual Image with smooth blur-up reveal */}
       {!hasError ? (
         <img
+          ref={imageRef}
           src={activeSrc}
           alt={photo.alt}
           referrerPolicy="no-referrer"

@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/publicAsset";
 export interface BirthdayPhoto {
   id: number;
   src: string;
@@ -15,12 +16,12 @@ export const galleryPhotos: BirthdayPhoto[] = [
   // 1. Portada Protagonista (Foto 9)
   {
     id: 9,
-    src: "/media/photos/hero-vale.webp",
+    src: publicAsset("/media/photos/hero-vale.webp"),
     fallbackSrcs: [
-      "/media/photos/foto-09.webp",
-      "/media/photos/Foto 9.jpeg",
-      "/media/photos/photo-09.jpg",
-      "/media/photos/hero-vale.jpg",
+      publicAsset("/media/photos/foto-09.webp"),
+      publicAsset("/media/photos/Foto 9.jpeg"),
+      publicAsset("/media/photos/photo-09.jpg"),
+      publicAsset("/media/photos/hero-vale.jpg"),
     ],
     originalFilename: "Foto 9.jpeg",
     alt: "Vale sonriendo en su día especial",
@@ -34,10 +35,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   // 2. Carrusel de Cumpleaños (8 Dedicatorias: Fotos 6, 3, 5, 14, 1, 19, 24, 12)
   {
     id: 6,
-    src: "/media/photos/foto-06.webp",
+    src: publicAsset("/media/photos/foto-06.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 6.jpeg",
-      "/media/photos/photo-06.jpg",
+      publicAsset("/media/photos/Foto 6.jpeg"),
+      publicAsset("/media/photos/photo-06.jpg"),
     ],
     originalFilename: "Foto 6.jpeg",
     alt: "La sonrisa luminosa de Vale",
@@ -48,10 +49,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 3,
-    src: "/media/photos/foto-03.webp",
+    src: publicAsset("/media/photos/foto-03.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 3.jpeg",
-      "/media/photos/photo-03.jpg",
+      publicAsset("/media/photos/Foto 3.jpeg"),
+      publicAsset("/media/photos/photo-03.jpg"),
     ],
     originalFilename: "Foto 3.jpeg",
     alt: "Momentos de sorpresa y alegría de Vale",
@@ -62,10 +63,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 5,
-    src: "/media/photos/foto-05.webp",
+    src: publicAsset("/media/photos/foto-05.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 5.jpeg",
-      "/media/photos/photo-05.jpg",
+      publicAsset("/media/photos/Foto 5.jpeg"),
+      publicAsset("/media/photos/photo-05.jpg"),
     ],
     originalFilename: "Foto 5.jpeg",
     alt: "Aventuras y planes espontáneos",
@@ -76,10 +77,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 14,
-    src: "/media/photos/foto-14.webp",
+    src: publicAsset("/media/photos/foto-14.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 14.jpeg",
-      "/media/photos/photo-14.jpg",
+      publicAsset("/media/photos/Foto 14.jpeg"),
+      publicAsset("/media/photos/photo-14.jpg"),
     ],
     originalFilename: "Foto 14.jpeg",
     alt: "Brindando por los sueños y logros de Vale",
@@ -90,10 +91,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 1,
-    src: "/media/photos/foto-01.webp",
+    src: publicAsset("/media/photos/foto-01.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 1.jpeg",
-      "/media/photos/photo-01.jpg",
+      publicAsset("/media/photos/Foto 1.jpeg"),
+      publicAsset("/media/photos/photo-01.jpg"),
     ],
     originalFilename: "Foto 1.jpeg",
     alt: "La autenticidad y ternura de Vale",
@@ -104,10 +105,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 19,
-    src: "/media/photos/foto-19.webp",
+    src: publicAsset("/media/photos/foto-19.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 19.jpeg",
-      "/media/photos/photo-19.jpg",
+      publicAsset("/media/photos/Foto 19.jpeg"),
+      publicAsset("/media/photos/photo-19.jpg"),
     ],
     originalFilename: "Foto 19.jpeg",
     alt: "Vale disfrutando de las cosas sencillas",
@@ -118,10 +119,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 24,
-    src: "/media/photos/foto-24.webp",
+    src: publicAsset("/media/photos/foto-24.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 24.jpeg",
-      "/media/photos/photo-24.jpg",
+      publicAsset("/media/photos/Foto 24.jpeg"),
+      publicAsset("/media/photos/photo-24.jpg"),
     ],
     originalFilename: "Foto 24.jpeg",
     alt: "Todas las versiones admirables de Vale",
@@ -132,10 +133,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 12,
-    src: "/media/photos/foto-12.webp",
+    src: publicAsset("/media/photos/foto-12.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 12.jpeg",
-      "/media/photos/photo-12.jpg",
+      publicAsset("/media/photos/Foto 12.jpeg"),
+      publicAsset("/media/photos/photo-12.jpg"),
     ],
     originalFilename: "Foto 12.jpeg",
     alt: "Pidiendo deseos en su cumpleaños",
@@ -148,11 +149,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   // 3. Sección de Viajes y Aventuras (Fotos 2, 4, 7, 8, 11, 13, 15, 16, 17, 18, 20, 21, 22, 23)
   {
     id: 2,
-    src: "/media/photos/foto-02.webp",
+    src: publicAsset("/media/photos/foto-02.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 2.jpeg",
-      "/media/photos/Foto 2.jpeg",
-      "/media/photos/photo-02.jpg",
+      publicAsset("/media/photos/foto 2.jpeg"),
+      publicAsset("/media/photos/Foto 2.jpeg"),
+      publicAsset("/media/photos/photo-02.jpg"),
     ],
     originalFilename: "foto 2.jpeg",
     alt: "Vale en paisaje nevado",
@@ -163,11 +164,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 4,
-    src: "/media/photos/foto-04.webp",
+    src: publicAsset("/media/photos/foto-04.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 4.jpeg",
-      "/media/photos/Foto 4.jpeg",
-      "/media/photos/photo-04.jpg",
+      publicAsset("/media/photos/foto 4.jpeg"),
+      publicAsset("/media/photos/Foto 4.jpeg"),
+      publicAsset("/media/photos/photo-04.jpg"),
     ],
     originalFilename: "foto 4.jpeg",
     alt: "Montaña y paisaje de nieve",
@@ -178,11 +179,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 7,
-    src: "/media/photos/foto-07.webp",
+    src: publicAsset("/media/photos/foto-07.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 7.jpeg",
-      "/media/photos/Foto 7.jpeg",
-      "/media/photos/photo-07.jpg",
+      publicAsset("/media/photos/foto 7.jpeg"),
+      publicAsset("/media/photos/Foto 7.jpeg"),
+      publicAsset("/media/photos/photo-07.jpg"),
     ],
     originalFilename: "foto 7.jpeg",
     alt: "Aventuras al aire libre",
@@ -193,11 +194,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 8,
-    src: "/media/photos/foto-08.webp",
+    src: publicAsset("/media/photos/foto-08.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 8 .jpeg",
-      "/media/photos/Foto 8.jpeg",
-      "/media/photos/photo-08.jpg",
+      publicAsset("/media/photos/Foto 8 .jpeg"),
+      publicAsset("/media/photos/Foto 8.jpeg"),
+      publicAsset("/media/photos/photo-08.jpg"),
     ],
     originalFilename: "Foto 8 .jpeg",
     alt: "Paisaje montañoso espectacular",
@@ -208,10 +209,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 11,
-    src: "/media/photos/foto-11.webp",
+    src: publicAsset("/media/photos/foto-11.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 11.jpeg",
-      "/media/photos/photo-11.jpg",
+      publicAsset("/media/photos/Foto 11.jpeg"),
+      publicAsset("/media/photos/photo-11.jpg"),
     ],
     originalFilename: "Foto 11.jpeg",
     alt: "Embarcación y mar abierto",
@@ -222,10 +223,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 13,
-    src: "/media/photos/foto-13.webp",
+    src: publicAsset("/media/photos/foto-13.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 13.jpeg",
-      "/media/photos/photo-13.jpg",
+      publicAsset("/media/photos/Foto 13.jpeg"),
+      publicAsset("/media/photos/photo-13.jpg"),
     ],
     originalFilename: "Foto 13.jpeg",
     alt: "Paisaje urbano descubierto juntos",
@@ -236,11 +237,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 15,
-    src: "/media/photos/foto-15.webp",
+    src: publicAsset("/media/photos/foto-15.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 15.jpeg",
-      "/media/photos/Foto 15.jpeg",
-      "/media/photos/photo-15.jpg",
+      publicAsset("/media/photos/foto 15.jpeg"),
+      publicAsset("/media/photos/Foto 15.jpeg"),
+      publicAsset("/media/photos/photo-15.jpg"),
     ],
     originalFilename: "foto 15.jpeg",
     alt: "Detalles del viaje",
@@ -251,11 +252,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 16,
-    src: "/media/photos/foto-16.webp",
+    src: publicAsset("/media/photos/foto-16.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 16.jpeg",
-      "/media/photos/Foto 16.jpeg",
-      "/media/photos/photo-16.jpg",
+      publicAsset("/media/photos/foto 16.jpeg"),
+      publicAsset("/media/photos/Foto 16.jpeg"),
+      publicAsset("/media/photos/photo-16.jpg"),
     ],
     originalFilename: "foto 16.jpeg",
     alt: "Explorando rincones",
@@ -266,10 +267,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 17,
-    src: "/media/photos/foto-17.webp",
+    src: publicAsset("/media/photos/foto-17.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 17.jpeg",
-      "/media/photos/photo-17.jpg",
+      publicAsset("/media/photos/Foto 17.jpeg"),
+      publicAsset("/media/photos/photo-17.jpg"),
     ],
     originalFilename: "Foto 17.jpeg",
     alt: "Mirador y señalización turística",
@@ -280,10 +281,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 18,
-    src: "/media/photos/foto-18.webp",
+    src: publicAsset("/media/photos/foto-18.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 18.jpeg",
-      "/media/photos/photo-18.jpg",
+      publicAsset("/media/photos/Foto 18.jpeg"),
+      publicAsset("/media/photos/photo-18.jpg"),
     ],
     originalFilename: "Foto 18.jpeg",
     alt: "Paisaje urbano junto al agua",
@@ -294,10 +295,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 20,
-    src: "/media/photos/foto-20.webp",
+    src: publicAsset("/media/photos/foto-20.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 20.jpeg",
-      "/media/photos/photo-20.jpg",
+      publicAsset("/media/photos/Foto 20.jpeg"),
+      publicAsset("/media/photos/photo-20.jpg"),
     ],
     originalFilename: "Foto 20.jpeg",
     alt: "Ambiente urbano nocturno",
@@ -308,10 +309,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 21,
-    src: "/media/photos/foto-21.webp",
+    src: publicAsset("/media/photos/foto-21.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 21.jpeg",
-      "/media/photos/photo-21.jpg",
+      publicAsset("/media/photos/Foto 21.jpeg"),
+      publicAsset("/media/photos/photo-21.jpg"),
     ],
     originalFilename: "Foto 21.jpeg",
     alt: "Paisaje nocturno iluminado",
@@ -322,10 +323,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 22,
-    src: "/media/photos/foto-22.webp",
+    src: publicAsset("/media/photos/foto-22.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 22.jpeg",
-      "/media/photos/photo-22.jpg",
+      publicAsset("/media/photos/Foto 22.jpeg"),
+      publicAsset("/media/photos/photo-22.jpg"),
     ],
     originalFilename: "Foto 22.jpeg",
     alt: "Fotografía en entorno urbano",
@@ -336,10 +337,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 23,
-    src: "/media/photos/foto-23.webp",
+    src: publicAsset("/media/photos/foto-23.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 23.jpeg",
-      "/media/photos/photo-23.jpg",
+      publicAsset("/media/photos/Foto 23.jpeg"),
+      publicAsset("/media/photos/photo-23.jpg"),
     ],
     originalFilename: "Foto 23.jpeg",
     alt: "Escenario nevado de ensueño",
@@ -352,11 +353,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   // 4. Fotografías Compartidas y Cierre (Fotos 10, 25, 26, 27, 28)
   {
     id: 10,
-    src: "/media/photos/foto-10.webp",
+    src: publicAsset("/media/photos/foto-10.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 10.jpeg",
-      "/media/photos/Foto 10.jpeg",
-      "/media/photos/photo-10.jpg",
+      publicAsset("/media/photos/foto 10.jpeg"),
+      publicAsset("/media/photos/Foto 10.jpeg"),
+      publicAsset("/media/photos/photo-10.jpg"),
     ],
     originalFilename: "foto 10.jpeg",
     alt: "Risas compartidas",
@@ -367,11 +368,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 25,
-    src: "/media/photos/foto-25.webp",
+    src: publicAsset("/media/photos/foto-25.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 25.jpeg",
-      "/media/photos/Foto 25.jpeg",
-      "/media/photos/photo-25.jpg",
+      publicAsset("/media/photos/foto 25.jpeg"),
+      publicAsset("/media/photos/Foto 25.jpeg"),
+      publicAsset("/media/photos/photo-25.jpg"),
     ],
     originalFilename: "foto 25.jpeg",
     alt: "Momentos inolvidables juntos",
@@ -382,11 +383,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 26,
-    src: "/media/photos/foto-26.webp",
+    src: publicAsset("/media/photos/foto-26.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 26.jpeg",
-      "/media/photos/Foto 26.jpeg",
-      "/media/photos/photo-26.jpg",
+      publicAsset("/media/photos/foto 26.jpeg"),
+      publicAsset("/media/photos/Foto 26.jpeg"),
+      publicAsset("/media/photos/photo-26.jpg"),
     ],
     originalFilename: "foto 26.jpeg",
     alt: "Abrazos y risas",
@@ -397,11 +398,11 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 27,
-    src: "/media/photos/foto-27.webp",
+    src: publicAsset("/media/photos/foto-27.webp"),
     fallbackSrcs: [
-      "/media/photos/foto 27.jpeg",
-      "/media/photos/Foto 27.jpeg",
-      "/media/photos/photo-27.jpg",
+      publicAsset("/media/photos/foto 27.jpeg"),
+      publicAsset("/media/photos/Foto 27.jpeg"),
+      publicAsset("/media/photos/photo-27.jpg"),
     ],
     originalFilename: "foto 27.jpeg",
     alt: "Celebrando el camino juntos",
@@ -412,10 +413,10 @@ export const galleryPhotos: BirthdayPhoto[] = [
   },
   {
     id: 28,
-    src: "/media/photos/foto-28.webp",
+    src: publicAsset("/media/photos/foto-28.webp"),
     fallbackSrcs: [
-      "/media/photos/Foto 28.jpeg",
-      "/media/photos/photo-28.jpg",
+      publicAsset("/media/photos/Foto 28.jpeg"),
+      publicAsset("/media/photos/photo-28.jpg"),
     ],
     originalFilename: "Foto 28.jpeg",
     alt: "Feliz cumpleaños, mi amor",

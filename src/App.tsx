@@ -6,6 +6,7 @@ import { NavigationControls } from "./components/NavigationControls";
 import { HeroBirthday } from "./components/HeroBirthday";
 import { BirthdayCelebrationCarousel } from "./components/BirthdayCelebrationCarousel";
 import { TravelStory } from "./components/TravelStory";
+import { BirthdayPhotoEncore } from "./components/BirthdayPhotoEncore";
 import { LoveLetter } from "./components/LoveLetter";
 import { MemoriesSection } from "./components/MemoriesSection";
 import { BirthdayGift } from "./components/BirthdayGift";
@@ -117,6 +118,9 @@ export function App() {
 
           {/* Travel Story */}
           <TravelStory onPhotoClick={(photo) => setSelectedPhoto(photo)} />
+
+          {/* Four additional photographs previously omitted from the visible experience */}
+          <BirthdayPhotoEncore onPhotoClick={(photo) => setSelectedPhoto(photo)} />
 
           {/* Transition: Carta (Capítulo IV) with ParticleField */}
           <ChapterTransition

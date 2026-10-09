@@ -1,3 +1,4 @@
+import { publicAsset } from "../utils/publicAsset";
 export const copy = {
   heartGate: {
     title: "Hay algo bonito esperándote, Vale.",
@@ -186,8 +187,8 @@ export const copy = {
         description:
           "Por esas pequeñas locuras que me hacen sonreír y por lo divertido que es compartir la vida contigo.",
         filename: "8307056ad70e48c98d275dbb7158d215.mov",
-        webPath: "/media/videos/video-01.mp4",
-        fallbackPath: "/media/videos/8307056ad70e48c98d275dbb7158d215.mov",
+        webPath: publicAsset("/media/videos/video-01.mp4"),
+        fallbackPath: publicAsset("/media/videos/8307056ad70e48c98d275dbb7158d215.mov"),
       },
       {
         id: 2,
@@ -195,8 +196,8 @@ export const copy = {
         description:
           "Que nunca pierdas esas ganas de jugar, de reír y de disfrutar cada instante.",
         filename: "IMG_7547.MOV",
-        webPath: "/media/videos/video-02.mp4",
-        fallbackPath: "/media/videos/IMG_7547.MOV",
+        webPath: publicAsset("/media/videos/video-02.mp4"),
+        fallbackPath: publicAsset("/media/videos/IMG_7547.MOV"),
       },
       {
         id: 3,
@@ -204,8 +205,8 @@ export const copy = {
         description:
           "Que todos los caminos te lleven a experiencias maravillosas, incluso a las más inesperadas.",
         filename: "IMG_0198.MOV",
-        webPath: "/media/videos/video-03.mp4",
-        fallbackPath: "/media/videos/IMG_0198.MOV",
+        webPath: publicAsset("/media/videos/video-03.mp4"),
+        fallbackPath: publicAsset("/media/videos/IMG_0198.MOV"),
       },
       {
         id: 4,
@@ -213,8 +214,8 @@ export const copy = {
         description:
           "Por todos los lugares que todavía te esperan y por las miles de sonrisas que te quedan por regalar.",
         filename: "IMG_3437.MOV",
-        webPath: "/media/videos/video-04.mp4",
-        fallbackPath: "/media/videos/IMG_3437.MOV",
+        webPath: publicAsset("/media/videos/video-04.mp4"),
+        fallbackPath: publicAsset("/media/videos/IMG_3437.MOV"),
       },
     ],
   },
